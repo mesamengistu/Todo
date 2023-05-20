@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+.sidebar-list {
+  list-style: none;
+  font-size: 100%;
+  font-weight: 500;
+  min-height: 77vh;
+}
+.sidebar-list li {
+  min-height: 50px;
+}
+.sidebar-list li:hover {
+  background-color: rgb(240, 242, 245);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (min-width: 800px) {
+  .sidebar-width {
+    width: 29% !important;
+  }
+  .body-container {
+    width: 71% !important;
+  }
+  .toggle-bar-conatiner {
+    display: none;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 992px) {
+  .sidebar-width {
+    width: 23% !important;
   }
-  to {
-    transform: rotate(360deg);
+  .body-container {
+    width: 77% !important;
   }
+  .toggle-bar-conatiner {
+    display: none;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .sidebar-width {
+    width: 60% !important;
+  }
+  .hide-bar {
+    display: none !important;
+  }
+  .App {
+    position: relative;
+  }
+  .whole-bar-container {
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+  }
+  .body-container {
+    position: absolute;
+    top: 30px;
+  }
+}
+.icon {
+  color: rgb(18, 140, 126);
+  font-size: 19px;
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+.icon-container {
+  background-color: rgb(240, 242, 245);
+  width: 30px !important;
+  margin-right: 5px;
+}
+.arrow-down-up-container .arrow {
+  font-size: 25px;
+}
+.user-name {
+  position: absolute;
+  top: 2px;
+  left: 60px;
+  text-transform: capitalize;
+}
+.user-email {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  font-size: 80%;
+}
+.account-container {
+  position: relative;
+}
+.user-photo {
+  height: 50px !important;
+}
+.account-setting {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+  background-color: rgb(255, 254, 254);
+}
+.account-setting div {
+  list-style: none;
+}
+.account-setting div li:hover {
+  background-color: rgb(240, 242, 245);
+}
+.account-setting div li {
+  height: 40px;
+}
+.toggle-icon-bar {
+  font-size: 25px;
+}
+.task-list-container {
+  max-height: 75vh;
+  overflow-y: auto;
+  display: block;
+  overflow-x: hidden;
+}
+.task {
+  height: 4.4vh;
+}
+.new-task-container {
+  position: fixed;
+  bottom: 6vh;
+}
+.task-description {
+  font-style: normal;
+  font-weight: normal;
+  min-height: 3.4em;
+}
+.task-detail-container {
+  height: 90vh;
+  background-color: rgb(240, 242, 245);
+}
+.task-detail-container ul li:hover {
+  background-color: rgb(240, 242, 245);
+}
+.task-detail-container ul li {
+  min-height: 4em;
+}
+.task-description:hover {
+  background-color: rgb(240, 242, 245);
 }
